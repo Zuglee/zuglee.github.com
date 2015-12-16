@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>yii2安装详解 | Zuglee的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Yii Framework是一个基于组件、用于开发大型 Web 应用的高性能 PHP 框架。前天正式开始研究Php，确实觉得它是为web开发而生，后期项目中有可能会用到yii框架，又开始了框架的学习，而框架的搭建遇到了一些问题，下面这里为大家整理一个比较详细的介绍，以及会遇到的一些问题和解决的方式。（ps:这里主要介绍的是composer的方式安装框架）
+
+一、安装Composer&quot;&amp;gt;一、安装Co">
+<meta property="og:type" content="article">
+<meta property="og:title" content="yii2安装详解">
+<meta property="og:url" content="http://zero2do.github.io/2015/12/16/yii2安装详解/index.html">
+<meta property="og:site_name" content="Zuglee的博客">
+<meta property="og:description" content="Yii Framework是一个基于组件、用于开发大型 Web 应用的高性能 PHP 框架。前天正式开始研究Php，确实觉得它是为web开发而生，后期项目中有可能会用到yii框架，又开始了框架的学习，而框架的搭建遇到了一些问题，下面这里为大家整理一个比较详细的介绍，以及会遇到的一些问题和解决的方式。（ps:这里主要介绍的是composer的方式安装框架）
+
+一、安装Composer&quot;&amp;gt;一、安装Co">
+<meta property="og:updated_time" content="2015-12-16T08:11:12.106Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="yii2安装详解">
+<meta name="twitter:description" content="Yii Framework是一个基于组件、用于开发大型 Web 应用的高性能 PHP 框架。前天正式开始研究Php，确实觉得它是为web开发而生，后期项目中有可能会用到yii框架，又开始了框架的学习，而框架的搭建遇到了一些问题，下面这里为大家整理一个比较详细的介绍，以及会遇到的一些问题和解决的方式。（ps:这里主要介绍的是composer的方式安装框架）
+
+一、安装Composer&quot;&amp;gt;一、安装Co">
+  
+    <link rel="alternative" href="/atom.xml" title="Zuglee的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "//hm.baidu.com/hm.js?0b8e8ee87e4708173f00d9048c309301";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+  })();
+  </script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="/assets/blogImg/zuglee.jpg" class="js-avatar" style="width: 100%;height: 100%;opacity: 1;">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Zuglee Tony</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">web开发</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+							<li><a href="/tags/随笔">随笔</a></li>
+				        
+							<li><a href="/tags/技术">技术</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/zuglee" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/u/3024656277" title="weibo">weibo</a>
+					        
+								<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/php/" style="font-size: 10px;">php</a> <a href="/tags/yii2/" style="font-size: 10px;">yii2</a> <a href="/tags/技术/" style="font-size: 10px;">技术</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+				
+				<section class="switch-part switch-part3">
+				
+					<div id="js-aboutme">我就是我，是人间不一样的烟火！</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Zuglee Tony</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="/assets/blogImg/zuglee.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Zuglee Tony</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">web开发</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+					<li><a href="/tags/随笔">随笔</a></li>
+		        
+					<li><a href="/tags/技术">技术</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/zuglee" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/u/3024656277" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-yii2安装详解" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/12/16/yii2安装详解/" class="article-date">
+  	<time datetime="2015-12-16T06:41:03.000Z" itemprop="datePublished">Dec 16</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      yii2安装详解
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/php/">php</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/yii2/">yii2</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>Yii Framework是一个基于组件、用于开发大型 Web 应用的高性能 PHP 框架。<br>前天正式开始研究Php，确实觉得它是为web开发而生，后期项目中有可能会用到yii框架，又开始了框架<br>的学习，而框架的搭建遇到了一些问题，下面这里为大家整理一个比较详细的介绍，以及会遇到的一些问<br>题和解决的方式。（ps:这里主要介绍的是composer的方式安装框架）</p>
+</blockquote>
+<h2 id="u4E00_u3001_u5B89_u88C5Composer"><a href="#u4E00_u3001_u5B89_u88C5Composer" class="headerlink" title="<strong>一、安装Composer</strong>"></a><strong>一、安装Composer</strong></h2><p>&emsp;&emsp;如果还没有安装 Composer，你可以按 <a href="https://getcomposer.org/download/" target="_blank" rel="external">getcomposer.org</a>中的方法安装。在 Linux 和 Mac OS X 中可以运行如下命令：<br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">curl -s <span class="string">http:</span><span class="comment">//getcomposer.org/installer | php</span></span><br><span class="line">mv composer.phar <span class="regexp">/usr/</span>local<span class="regexp">/bin/</span>composer</span><br></pre></td></tr></table></figure></p>
+<p>&emsp;&emsp;在 Windows 中，你需要下载并运行 <a href="https://getcomposer.org/Composer-Setup.exe" target="_blank" rel="external">Composer-Setup.exe</a>。如果遇到任何问题或者想更深入地学习 Composer，请参考 <a href="https://getcomposer.org/doc/" target="_blank" rel="external">Composer 文档(英文)</a>，<a href="https://github.com/5-say/composer-doc-cn" target="_blank" rel="external">Composer 中文</a>。</p>
+<h2 id="u4E8C_u3001_u5B89_u88C5Yii2_u6846_u67B6_uFF08_u6838_u5FC3_uFF09"><a href="#u4E8C_u3001_u5B89_u88C5Yii2_u6846_u67B6_uFF08_u6838_u5FC3_uFF09" class="headerlink" title="<strong>二、安装Yii2框架（核心）</strong>"></a><strong>二、安装Yii2框架（核心）</strong></h2><p>Composer 安装后，切换到服务器可以访问的目录下以便安装完成进行访问测试。</p>
+<h4 id="1-_u5B89_u88C5_u201Cfxp/composer-asset-plugin_u201D_composer_u63D2_u4EF6"><a href="#1-_u5B89_u88C5_u201Cfxp/composer-asset-plugin_u201D_composer_u63D2_u4EF6" class="headerlink" title="<strong>1.安装“fxp/composer-asset-plugin” composer插件</strong>"></a><strong>1.安装“fxp/composer-asset-plugin” composer插件</strong></h4><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="label">composer</span> <span class="preprocessor">global</span> <span class="preprocessor">require</span> <span class="string">"fxp/composer-asset-plugin:~1.1.1"</span></span><br></pre></td></tr></table></figure>
+<p>注意：<code>不安装的情况下，会出现部分下列错误代码</code></p>
+<hr>
+<pre><code>Your requirements could not be resolved to an installable set of packages.
+Problem 1
+  yiisoft/yii2 2.0.x-dev requires bower-asset/jquery 2.1.*@stable
+  | 1.11.*@stable -&gt; no matching package found.
+</code></pre><h4 id="2-_u901A_u8FC7_Composer__u5B89_u88C5yii2_u6846_u67B6_u57FA_u7840_u7248"><a href="#2-_u901A_u8FC7_Composer__u5B89_u88C5yii2_u6846_u67B6_u57FA_u7840_u7248" class="headerlink" title="<strong>2.通过 Composer 安装yii2框架基础版</strong>"></a><strong>2.通过 Composer 安装yii2框架基础版</strong></h4><p>插件安装完成后，此时由于国内部分依赖或者组件被“墙”的原因，安装依然有可能失败，这里就需要大家发挥自己的fan墙能力。（我测试的时候国内的镜像网站上安装依然会报错）<br>如果越墙成功后，在web执行目录下，执行如下命令即可安装 Yii：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">composer <span class="operator"><span class="keyword">create</span>-<span class="keyword">project</span> <span class="comment">--prefer-dist yiisoft/yii2-app-basic basic</span></span></span><br></pre></td></tr></table></figure></p>
+<p>技巧：如果你想安装 Yii 的最新开发版本，可以使用如下命令，它添加了一个 <a href="https://getcomposer.org/doc/04-schema.md#minimum-stability" target="_blank" rel="external">stability 选项</a>(<a href="https://github.com/5-say/composer-doc-cn/blob/master/cn-introduction/04-schema.md#minimum-stability" target="_blank" rel="external">中文版</a>):</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">composer <span class="operator"><span class="keyword">create</span>-<span class="keyword">project</span> <span class="comment">--prefer-dist --stability=dev yiisoft/yii2-app-basic basic</span></span></span><br></pre></td></tr></table></figure>
+<p>注意，Yii 的开发版(dev 版)不应该用于生产环境中，它可能会破坏运行中的代码。</p>
+<h4 id="3-_u901A_u8FC7_u5F52_u6863_u6587_u4EF6_u5B89_u88C5_uFF08_u672A_u6D4B_u8BD5_uFF09"><a href="#3-_u901A_u8FC7_u5F52_u6863_u6587_u4EF6_u5B89_u88C5_uFF08_u672A_u6D4B_u8BD5_uFF09" class="headerlink" title="<strong>3.通过归档文件安装（未测试）</strong>"></a><strong>3.通过归档文件安装（未测试）</strong></h4><ol>
+<li>从 <a href="http://www.yiiframework.com/download/yii2-basic" target="_blank" rel="external">yiiframework.com</a> 下载归档文件。</li>
+<li>将下载的文件解压缩到 Web 目录中。</li>
+<li>修改 <code>config/web.php</code> 文件，给 <code>cookieValidationKey</code> 配置项添加一个密钥(若你通过 Composer 安装，则此步骤会自动完成)：<figure class="highlight erlang-repl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// <span class="exclamation_mark">!</span><span class="exclamation_mark">!</span><span class="exclamation_mark">!</span> 在下面插入一段密钥(若为空) - 以供 <span class="function_or_atom">cookie</span> <span class="function_or_atom">validation</span> 的需要</span><br><span class="line"><span class="string">'cookieValidationKey'</span> =&gt; <span class="string">'在此处输入你的密钥'</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="u4E09_u3001_u9A8C_u8BC1_u5B89_u88C5_u7ED3_u679C"><a href="#u4E09_u3001_u9A8C_u8BC1_u5B89_u88C5_u7ED3_u679C" class="headerlink" title="<strong>三、验证安装结果</strong>"></a><strong>三、验证安装结果</strong></h2><p>安装完成后，就可以使用浏览器通过如下 URL 访问刚安装完的 Yii 应用了：</p>
+<p><a href="http://localhost/basic/web/index.php" target="_blank" rel="external">http://localhost/basic/web/index.php</a></p>
+<p>这个 URL 假设你将 Yii 安装到了一个位于 Web 文档根目录下的 <code>basic</code> 目录中，且该 Web 服务器正运行在你自己的电脑上(<code>localhost</code>)。你可能需要将其调整为适应自己的安装环境。<br>![Yii 安装成功]</p>
+<p>你应该可以在浏览器中看到如上所示的 “Congratulations!” 页面。如果没有，请通过以下任意一种方式，检查当前 PHP 环境是否满足 Yii 最基本需求：</p>
+<ul>
+<li>通过浏览器访问 URL <code>http://localhost/basic/requirements.php</code></li>
+<li>执行如下命令：</li>
+</ul>
+<p><a href="http://localhost/basic/web/index.php" target="_blank" rel="external">http://localhost/basic/web/index.php</a></p>
+<p>你需要配置好 PHP 安装环境，使其符合 Yii 的最小需求。主要是需要 PHP 5.4 以上版本。如果应用需要用到数据库，那还要安装 <a href="http://www.php.net/manual/zh/pdo.installation.php" target="_blank" rel="external">PDO PHP 扩展</a> 和相应的数据库驱动(例如访问 MySQL 数据库所需的 <code>pdo_mysql</code>)。</p>
+<h2 id="u56DB_u3001_u914D_u7F6Eweb_u670D_u52A1_u5668_28_u6682_u65F6_u672A_u6D89_u53CA_29"><a href="#u56DB_u3001_u914D_u7F6Eweb_u670D_u52A1_u5668_28_u6682_u65F6_u672A_u6D89_u53CA_29" class="headerlink" title="<strong>四、配置web服务器(暂时未涉及)</strong>"></a><strong>四、配置web服务器(暂时未涉及)</strong></h2><p>可以参考：<a href="http://www.yiibai.com/yii2/installation.html" target="_blank" rel="external">易百教程</a></p>
+<h2 id="u4E94_u3001_u63A8_u8350_u53C2_u8003"><a href="#u4E94_u3001_u63A8_u8350_u53C2_u8003" class="headerlink" title="<strong>五、推荐参考</strong>"></a><strong>五、推荐参考</strong></h2><p><a href="http://www.yiiframework.com/doc-2.0/guide-start-installation.html#installing-via-composer" target="_blank" rel="external">官方参考</a> <a href="http://www.yiiframework.com/doc-2.0/guide-start-installation.html#installing-via-composer" target="_blank" rel="external">http://www.yiiframework.com/doc-2.0/guide-start-installation.html#installing-via-composer</a><br><a href="http://www.yiibai.com/yii2/installation.html" target="_blank" rel="external">参考:易百教程</a> <a href="http://www.yiibai.com/yii2/installation.html" target="_blank" rel="external">http://www.yiibai.com/yii2/installation.html</a><br><a href="http://pkg.phpcomposer.com/" target="_blank" rel="external">国内依赖镜像网站</a> <a href="http://pkg.phpcomposer.com/" target="_blank" rel="external">http://pkg.phpcomposer.com/</a> (ps:有的依赖可能没缓存，能墙的还是不用了)</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="yii2安装详解" data-title="yii2安装详解" data-url="http://zero2do.github.io/2015/12/16/yii2安装详解/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"zuglee"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2015 Zuglee Tony
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: undefined,
+		animate: undefined,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: undefined
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+
+
+
+  </div>
+</body>
+</html>
